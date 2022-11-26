@@ -12,7 +12,8 @@
     - ON
 - Lambda Function
   - IAM Role
-    - Create new Role (Default)
+    - Create new Role
+      - Default Basic role (for CloudWatch logs)
     - Add Policy
       - `s3:PutObject` (Resource : `arn:aws:s3:::[S3 Bucket name]/*`)
   - Configuration
