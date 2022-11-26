@@ -15,7 +15,8 @@
     - Create new Role
       - Default Basic role (for CloudWatch logs)
     - Add Policy
-      - `s3:PutObject` (Resource : `arn:aws:s3:::[S3 Bucket name]/*`)
+      - `s3:PutObject`
+        - Resource : `arn:aws:s3:::[S3 Bucket name]/*`
   - Configuration
     - General
       - Timedout : 30 sec.
