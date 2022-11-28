@@ -21,8 +21,8 @@
         - Resource : `*`
       - `dynamodb:PutItem`, `dynamodb:GetItem`, `dynamodb:Query`
         - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for mail sent log]`
-      - for DynamoDB Streams
-        - Automatic generation when creating trigger
+      - `dynamodb:GetShardIterator`, `dynamodb:DescribeStream`, `dynamodb:GetRecords`
+        - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for mail sent log]/stream/*`
   - Configuration
     - General
       - Timedout : 30 sec.

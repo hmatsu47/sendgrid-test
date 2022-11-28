@@ -34,10 +34,10 @@ def lambda_handler(event, context):
                 message = Message(item)
                 # SendGridで送信
                 sg_response = send(message)
-                status = sg_response.status_code
+                status      = sg_response.status_code
                 if (status > 299):
                     raise Exception('SendGrid API Error.')
-                message_id = sg_response.headers['X-Message-Id'].split('.')[0]
+                message_id  = sg_response.headers['X-Message-Id'].split('.')[0]
                 # 表示用テーブルに転記
                 tb_response = store(table, message, message_id)
                 print('Result table:', tb_response)
@@ -68,13 +68,13 @@ def send(message):
     # SendGridで通知
     sg         = sendgrid.SendGridAPIClient(api_key=sg_api_key)
 
-    from_email = Email(message.from_email.get('email'), message.from_email.get('name'))
+    from_email = Email(message.from_email.get('email'), message.from_email.get('name', ''))
     subject    = message.subject
     content    = Content("text/plain", message.content)
 
     to_email = []
     for toItem in message.to_email:
-        to_email.append(To(toItem.get('email'), toItem.get('name')))
+        to_email.append(To(toItem.get('email'), toItem.get('name', '')))
 
     mail       = Mail(from_email, to_email, subject, content)
 
@@ -85,9 +85,9 @@ def store(table, message, message_id):
     response = table.put_item(
         Item={
             'messageId': message_id,
-            'from': json.dumps(message.from_email),
-            'subject': message.subject,
-            'to': json.dumps(message.to_email)
+            'from'     : json.dumps(message.from_email),
+            'subject'  : message.subject,
+            'to'       : json.dumps(message.to_email)
         }
     )
     if (response['ResponseMetadata']['HTTPStatusCode'] != 200):

@@ -27,5 +27,8 @@
     - Long and random path
       - Action : POST only
         - Integration request : type LAMBDA_PROXY
+      - POST Method Response : add 500
+        - `application/json`
+        - Empty
   - Stage
     - `v1`

@@ -16,3 +16,5 @@ SendGrid テスト用リポジトリ
       - ex. [{"email": "[mail address]", "name": "[receiver name]"}, {"email": "[mail address]", "name": "[receiver name]"}]
     - subject : Subject (Title)
     - content : Content body
+- [testBounceReceiver](lambda/testBounceReceiver/README.md)
+  - Bounce を Event Webhook から受信して DynamoDB table (fro bounce) に書き込み
