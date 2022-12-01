@@ -1,15 +1,5 @@
 ## 必要な準備
 
-### SendGrid
-
-- Mail Settings
-  - Event Settings
-    - Event Webhook : Enabled
-      - HTTP Post URL
-      - Events to be POSTed to your URL:
-        - Dropped
-        - Bounced
-
 ### AWS
 
 - DynamoDB tables
@@ -42,3 +32,13 @@
     - `v1`
 - KMS
   - Add Role (for Lambda)
+
+### SendGrid
+
+- Mail Settings
+  - Event Settings
+    - Event Webhook : Enabled
+      - HTTP Post URL
+      - Events to be POSTed to your URL:
+        - Dropped
+        - Bounced
