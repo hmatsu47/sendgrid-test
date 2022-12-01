@@ -17,4 +17,4 @@ SendGrid テスト用リポジトリ
     - subject : Subject (Title)
     - content : Content body
 - [testBounceReceiver](lambda/testBounceReceiver/README.md)
-  - Bounce を Event Webhook から受信して DynamoDB table (fro bounce) に書き込み
+  - Bounce を Event Webhook から受信して DynamoDB table (for bounce) に書き込み
