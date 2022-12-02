@@ -4,7 +4,7 @@
 
 - DynamoDB tables
   - for bounce
-    - Partition key : messageId (String)
+    - Partition key : fullMessageId (String)
 - Lambda Function
   - IAM Role
     - Create new Role
