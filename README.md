@@ -4,6 +4,8 @@ SendGrid テスト用リポジトリ
 
 ## AWS Lambda 関数
 
+※あらかじめ [SendGrid Python SDK](https://github.com/sendgrid/sendgrid-python) を Lambda Layer 化しておき、各 Lambda 関数で使用する
+
 - [testMailReceiver](lambda/testMailReceiver/README.md)
   - SendGrid でメールを受信して S3 バケットに保存する
     - ユーザー名の識別は行わない

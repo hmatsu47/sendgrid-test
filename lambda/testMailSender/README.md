@@ -23,6 +23,8 @@
         - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for mail sent log]`
       - `dynamodb:GetShardIterator`, `dynamodb:DescribeStream`, `dynamodb:GetRecords`
         - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for mail sent log]/stream/*`
+  - Layer
+    - [SendGrid Python SDK](https://github.com/sendgrid/sendgrid-python)
   - Configuration
     - General
       - Timedout : 30 sec.

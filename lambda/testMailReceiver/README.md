@@ -17,6 +17,8 @@
     - Add Policy
       - `s3:PutObject`
         - Resource : `arn:aws:s3:::[S3 Bucket name]/*`
+  - Layer
+    - [SendGrid Python SDK](https://github.com/sendgrid/sendgrid-python)
   - Configuration
     - General
       - Timedout : 30 sec.
