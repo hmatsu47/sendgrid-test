@@ -12,6 +12,9 @@
     - Partition key : id (String)
   - for mail sent log
     - Partition key : messageId (String)
+- KMS customer key
+  - for Lambda (Environment variables)
+    - Create
 - Lambda Function
   - IAM Role
     - Create new Role
@@ -31,8 +34,13 @@
     - Environment variables
       - `SENDGRID_API_KEY` : SendGrid API Key
       - `TABLE_SENT_LOG` : Table name (for sent log)
+- KMS customer key
+  - for DynamoDB tables
+    - Add Role (for Lambda)
+  - for Lambda (Environment variables)
+    - Add Role (for Lambda)
 - DynamoDB tables
   - for mail sender
     - DynamoDB Streams
-      - Trigger : lambda funvtion
+      - Trigger : lambda function
         - Batch size : 100

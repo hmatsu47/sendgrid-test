@@ -2,6 +2,9 @@
 
 ### AWS
 
+- KMS customer key
+  - for DynamoDB tables
+    - Create
 - DynamoDB tables
   - for bounce
     - Partition key : fullMessageId (String)
@@ -32,8 +35,9 @@
         - Empty
   - Stage
     - `v1`
-- KMS
-  - Add Role (for Lambda)
+- KMS customer key
+  - for DynamoDB tables
+    - Add Role (for Lambda)
 
 ### SendGrid
 
