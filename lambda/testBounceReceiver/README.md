@@ -17,8 +17,6 @@
         - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for mail sent log]`
       - `dynamodb:PutItem`
         - Resource : `arn:aws:dynamodb:[Region]:[Account ID]:table/[for bounce]`
-  - Layer
-    - [SendGrid Python SDK](https://github.com/sendgrid/sendgrid-python)
   - Configuration
     - General
       - Timedout : 30 sec.
