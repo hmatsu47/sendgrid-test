@@ -38,7 +38,7 @@ def lambda_handler(event, context):
                 if (status > 299):
                     raise Exception('SendGrid API Error.')
                 message_id  = sg_response.headers['X-Message-Id'].split('.')[0]
-                # 表示用テーブルに転記
+                # 履歴用テーブルに転記
                 tb_response = store(table, message, message_id)
                 print('Result table:', tb_response)
             except Exception as e:
