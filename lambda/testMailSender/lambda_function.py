@@ -20,7 +20,7 @@ sg_api_key = boto3.client('kms').decrypt(
 table_sent_log = os.environ['TABLE_SENT_LOG']
 
 def lambda_handler(event, context):
-    # 送信ログ用テーブルの準備
+    # 送信履歴用テーブルの準備
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table(table_sent_log)
     # ストリームから受け取った変更後レコードリストをループ処理
