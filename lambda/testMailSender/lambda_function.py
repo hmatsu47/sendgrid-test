@@ -70,7 +70,7 @@ def send(message):
 
     from_email = Email(message.from_email.get('email'), message.from_email.get('name', ''))
     subject    = message.subject
-    content    = Content("text/plain", message.content)
+    content    = Content('text/plain', message.content)
 
     to_email = []
     for toItem in message.to_email:
